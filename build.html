@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Build Your Own Pole | SummitPole</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="brand">
+        <span class="brand-mark">▲</span>
+        <div>
+          <p class="brand-name">SummitPole</p>
+          <p class="brand-tag">Engineered for long days on trail</p>
+        </div>
+      </div>
+
+      <nav class="site-nav">
+        <a href="index.html#poles">Poles</a>
+        <a href="index.html#technology">Technology</a>
+        <a href="index.html#stories">Stories</a>
+        <a href="index.html#gear">Gear</a>
+        <a href="build.html">Customize</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn-secondary" href="index.html">Home</a>
+        <button class="btn btn-primary">Finish</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero-section hero-build">
+        <div class="hero-copy">
+          <p class="eyebrow">Customize your pole</p>
+          <h1>Build the pole that fits your trail, your pace, and your style.</h1>
+          <p class="hero-text">
+            Choose from advanced modules built for stability, comfort, and performance. Every part is designed to work together like the best engineered vehicle.
+          </p>
+        </div>
+      </section>
+
+      <section class="build-panel build-layout">
+        <div class="model-view">
+          <div class="model-scene" id="modelScene" aria-label="3D pole preview"></div>
+          <div class="model-label">Drag to rotate • Preview updates live</div>
+        </div>
+
+        <div class="build-controls">
+          <div class="module-grid">
+            <article class="module-card">
+              <span class="module-label">0</span>
+              <h2>Base package</h2>
+              <p>Core pole assembly, ergonomic grip, and standard finish.</p>
+              <div class="module-price">Base price <strong>$279</strong></div>
+              <div class="control-group">
+                <label><input type="radio" name="base" value="standard" checked /><span>SummitPole Base</span><span class="option-price">Included</span></label>
+              </div>
+            </article>
+
+            <article class="module-card">
+              <span class="module-label">1</span>
+              <h2>GPS Navigation</h2>
+              <p>Integrated location support for wayfinding and route tracking.</p>
+              <div class="control-group">
+                <label><input type="radio" name="gps" value="standard" checked /><span>Standard GPS</span><span class="option-price">Included</span></label>
+                <label><input type="radio" name="gps" value="pro" /><span>Pro GPS + Compass</span><span class="option-price">+$60</span></label>
+              </div>
+            </article>
+
+            <article class="module-card">
+              <span class="module-label">2</span>
+              <h2>Alarm System</h2>
+              <p>Protect your gear and stay aware of unexpected terrain changes.</p>
+              <div class="control-group">
+                <label><input type="radio" name="alarm" value="silent" checked /><span>Silent alert</span><span class="option-price">Included</span></label>
+                <label><input type="radio" name="alarm" value="audible" /><span>Audible beacon</span><span class="option-price">+$20</span></label>
+              </div>
+            </article>
+
+            <article class="module-card">
+              <span class="module-label">3</span>
+              <h2>Tip Selection</h2>
+              <p>Pick the tip that matches your route and ground conditions.</p>
+              <div class="control-group">
+                <label><input type="radio" name="tip" value="trail" checked /><span>Trail tip</span><span class="option-price">Included</span></label>
+                <label><input type="radio" name="tip" value="snow" /><span>Snow basket</span><span class="option-price">+$15</span></label>
+                <label><input type="radio" name="tip" value="rock" /><span>Rock-climb tip</span><span class="option-price">+$20</span></label>
+              </div>
+            </article>
+
+            <article class="module-card">
+              <span class="module-label">4</span>
+              <h2>Thickness</h2>
+              <p>Balance rigidity and weight with the right shaft profile.</p>
+              <div class="control-group">
+                <label><input type="radio" name="thickness" value="lightweight" checked /><span>Lightweight</span><span class="option-price">Included</span></label>
+                <label><input type="radio" name="thickness" value="reinforced" /><span>Reinforced</span><span class="option-price">+$30</span></label>
+              </div>
+            </article>
+
+            <article class="module-card">
+              <span class="module-label">5</span>
+              <h2>Length</h2>
+              <p>Select the ideal pole length for your height and terrain type.</p>
+              <div class="control-group">
+                <label><input type="radio" name="length" value="110-125" checked /><span>110–125 cm</span><span class="option-price">Included</span></label>
+                <label><input type="radio" name="length" value="125-140" /><span>125–140 cm</span><span class="option-price">+$20</span></label>
+                <label><input type="radio" name="length" value="140-155" /><span>140–155 cm</span><span class="option-price">+$35</span></label>
+              </div>
+            </article>
+          </div>
+
+          <aside class="summary-card">
+            <div class="summary-header">
+              <span>Build summary</span>
+              <strong>Summit Pro</strong>
+            </div>
+            <ul id="buildSummary">
+              <li>GPS: Standard GPS</li>
+              <li>Alarm: Silent alert</li>
+              <li>Tip: Trail tip</li>
+              <li>Thickness: Lightweight</li>
+              <li>Length: 110–125 cm</li>
+            </ul>
+            <div class="summary-foot">
+              <div>
+                <span>Total</span>
+                <strong id="buildPrice">$279</strong>
+              </div>
+              <button class="btn btn-primary">Add to Cart</button>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="build-info">
+        <article>
+          <h2>Modular design, rugged performance</h2>
+          <p>Each module is engineered for quick changes and long-lasting use, so your pole can adapt from ridge runs to alpine traverses.</p>
+        </article>
+        <article>
+          <h2>Built like a premium vehicle</h2>
+          <p>From integrated navigation to impact-resistant tips, the SummitPole build experience reflects modern automotive control systems and materials.</p>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 SummitPole. Crafted for modern hiking.</p>
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="#">Support</a>
+        <a href="#">Privacy</a>
+      </nav>
+    </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/three/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three/examples/js/controls/OrbitControls.js"></script>
+<script>
+const summary = {
+    gps: { standard: 'Standard GPS', pro: 'Pro GPS + Compass' },
+    alarm: { silent: 'Silent alert', audible: 'Audible beacon' },
+    tip: { trail: 'Trail tip', snow: 'Snow basket', rock: 'Rock-climb tip' },
+    thickness: { lightweight: 'Lightweight', reinforced: 'Reinforced' },
+    length: { '110-125': '110–125 cm', '125-140': '125–140 cm', '140-155': '140–155 cm' }
+  };
+
+  const price = {
+    gps: { standard: 0, pro: 60 },
+    alarm: { silent: 0, audible: 20 },
+    tip: { trail: 0, snow: 15, rock: 20 },
+    thickness: { lightweight: 0, reinforced: 30 },
+    length: { '110-125': 0, '125-140': 20, '140-155': 35 }
+  };
+
+  const state = {
+    gps: 'standard',
+    alarm: 'silent',
+    tip: 'trail',
+    thickness: 'lightweight',
+    length: '110-125'
+  };
+
+  const summaryList = document.getElementById('buildSummary');
+  const priceLabel = document.getElementById('buildPrice');
+  const modelScene = document.getElementById('modelScene');
+
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 100);
+  camera.position.set(0, 1.8, 8.5);
+
+  const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+  renderer.setPixelRatio(window.devicePixelRatio);
+  renderer.setClearColor(0x0b1020, 0);
+  renderer.outputEncoding = THREE.sRGBEncoding;
+  modelScene.appendChild(renderer.domElement);
+
+  const controls = new THREE.OrbitControls(camera, renderer.domElement);
+  controls.enableDamping = true;
+  controls.enableZoom = true;
+  controls.minDistance = 3.5;
+  controls.maxDistance = 14;
+  controls.maxPolarAngle = Math.PI * 0.9;
+  controls.target.set(0, 0.8, 0);
+  controls.update();
+
+  // Lighting tuned to bring out metallic highlights on the shaft
+  const hemiLight = new THREE.HemisphereLight(0xffffff, 0x202040, 0.65);
+  const dirLight = new THREE.DirectionalLight(0xffffff, 1.3);
+  dirLight.position.set(5, 8, 5);
+  scene.add(hemiLight, dirLight);
+
+  const rimLight = new THREE.DirectionalLight(0x8fb8ff, 0.6);
+  rimLight.position.set(-6, 3, -4);
+  scene.add(rimLight);
+
+  const fillLight = new THREE.PointLight(0xffffff, 0.4, 20);
+  fillLight.position.set(0, 2, 4);
+  scene.add(fillLight);
+
+  // Generate a simple procedural environment map so metallic surfaces have something to reflect
+  const pmremGenerator = new THREE.PMREMGenerator(renderer);
+  pmremGenerator.compileEquirectangularShader();
+
+  function buildEnvTexture() {
+    const size = 256;
+    const canvas = document.createElement('canvas');
+    canvas.width = size; canvas.height = size / 2;
+    const ctx = canvas.getContext('2d');
+    const grad = ctx.createLinearGradient(0, 0, 0, canvas.height);
+    grad.addColorStop(0, '#2a3550');
+    grad.addColorStop(0.4, '#c7d3e8');
+    grad.addColorStop(0.55, '#eef2fa');
+    grad.addColorStop(0.7, '#3a4560');
+    grad.addColorStop(1, '#05070f');
+    ctx.fillStyle = grad;
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    // faint horizontal bands to fake studio softbox reflections
+    for (let i = 0; i < 6; i++) {
+      ctx.fillStyle = 'rgba(255,255,255,0.08)';
+      ctx.fillRect(0, (canvas.height / 6) * i + 4, canvas.width, 3);
+    }
+    const tex = new THREE.CanvasTexture(canvas);
+    tex.mapping = THREE.EquirectangularReflectionMapping;
+    tex.encoding = THREE.sRGBEncoding;
+    return tex;
+  }
+
+  const envTexture = buildEnvTexture();
+  const envRT = pmremGenerator.fromEquirectangular(envTexture);
+  scene.environment = envRT.texture;
+  envTexture.dispose();
+  pmremGenerator.dispose();
+
+  const poleGroup = new THREE.Group();
+  scene.add(poleGroup);
+
+  // ---- Materials ----
+  const gripMaterial = new THREE.MeshStandardMaterial({ color: 0x8a8a8a, roughness: 0.75, metalness: 0.08 });
+  const capMaterial = new THREE.MeshStandardMaterial({ color: 0x6e6e6e, roughness: 0.7, metalness: 0.1 });
+
+  // Black metallic shaft — high metalness, low-mid roughness, boosted envMapIntensity for a brushed-metal sheen
+  const shaftMaterial = new THREE.MeshStandardMaterial({
+    color: 0x14161a,
+    roughness: 0.28,
+    metalness: 0.85,
+    envMapIntensity: 1.4
+  });
+
+  const clampMaterial = new THREE.MeshStandardMaterial({ color: 0xff7a00, roughness: 0.45, metalness: 0.15 });
+  const clampBodyMaterial = new THREE.MeshStandardMaterial({ color: 0x141414, roughness: 0.35, metalness: 0.6, envMapIntensity: 1.1 });
+  const strapOrangeMaterial = new THREE.MeshStandardMaterial({ color: 0xff8c1a, roughness: 0.85, metalness: 0.0 });
+  const strapBlackMaterial = new THREE.MeshStandardMaterial({ color: 0x1a1a1a, roughness: 0.85, metalness: 0.0 });
+  const tipMaterial = new THREE.MeshStandardMaterial({ color: 0x161616, roughness: 0.25, metalness: 0.75, envMapIntensity: 1.2 });
+  const basketMaterial = new THREE.MeshStandardMaterial({ color: 0x1c1c1c, roughness: 0.4, metalness: 0.5 });
+  const triggerMaterial = new THREE.MeshStandardMaterial({ color: 0xff6a00, roughness: 0.4, metalness: 0.1 });
+
+  // GPS module materials
+  const gpsHousingMaterial = new THREE.MeshStandardMaterial({ color: 0x2b2f36, roughness: 0.35, metalness: 0.4 });
+  const gpsScreenMaterial = new THREE.MeshStandardMaterial({ color: 0x1a3a52, emissive: 0x2ea8ff, emissiveIntensity: 0.5, roughness: 0.2 });
+  const gpsAntennaMaterial = new THREE.MeshStandardMaterial({ color: 0x111111, roughness: 0.5, metalness: 0.3 });
+  const gpsButtonMaterial = new THREE.MeshStandardMaterial({ color: 0xcccccc, roughness: 0.4, metalness: 0.5 });
+  const compassRingMaterial = new THREE.MeshStandardMaterial({ color: 0xc0c0c0, roughness: 0.25, metalness: 0.8 });
+
+  // Alarm/beacon module materials
+  const alarmHousingMaterial = new THREE.MeshStandardMaterial({ color: 0x3a1414, roughness: 0.4, metalness: 0.3 });
+  const alarmSpeakerMaterial = new THREE.MeshStandardMaterial({ color: 0x111111, roughness: 0.6, metalness: 0.2 });
+  const alarmLedMaterial = new THREE.MeshStandardMaterial({ color: 0xff3030, emissive: 0xff3030, emissiveIntensity: 0.6 });
+
+  // ==================================================
+  // HANDLE ASSEMBLY
+  // ==================================================
+
+  const gripProfile = [
+    new THREE.Vector2(0.14, 0.0),
+    new THREE.Vector2(0.185, 0.15),
+    new THREE.Vector2(0.20, 0.38),
+    new THREE.Vector2(0.175, 0.62),
+    new THREE.Vector2(0.155, 0.78),
+    new THREE.Vector2(0.19, 0.95),
+    new THREE.Vector2(0.205, 1.08),
+    new THREE.Vector2(0.15, 1.18)
+  ];
+  const gripGeo = new THREE.LatheGeometry(gripProfile, 32);
+  const handleGrip = new THREE.Mesh(gripGeo, gripMaterial);
+  handleGrip.position.y = 2.1;
+  poleGroup.add(handleGrip);
+
+  // Forward-curving neck under the palm rest, matching the pistol-grip silhouette in the photo
+  const gripNeckCurve = new THREE.CatmullRomCurve3([
+    new THREE.Vector3(0, 3.2, 0),
+    new THREE.Vector3(0.05, 3.28, 0.01),
+    new THREE.Vector3(0.12, 3.34, 0.02)
+  ]);
+  const gripNeck = new THREE.Mesh(new THREE.TubeGeometry(gripNeckCurve, 12, 0.16, 12, false), gripMaterial);
+  poleGroup.add(gripNeck);
+
+  const topCap = new THREE.Mesh(new THREE.CylinderGeometry(0.13, 0.17, 0.3, 24), capMaterial);
+  topCap.position.set(0.12, 3.4, 0.02);
+  topCap.rotation.z = -Math.PI * 0.16;
+  poleGroup.add(topCap);
+
+  const triggerBase = new THREE.Mesh(new THREE.BoxGeometry(0.22, 0.09, 0.09), triggerMaterial);
+  triggerBase.position.set(0.42, 3.5, 0.02);
+  triggerBase.rotation.z = -Math.PI * 0.14;
+  poleGroup.add(triggerBase);
+
+  const triggerTip = new THREE.Mesh(new THREE.ConeGeometry(0.075, 0.24, 12), triggerMaterial);
+  triggerTip.position.set(0.57, 3.45, 0.02);
+  triggerTip.rotation.z = -Math.PI * 0.62;
+  poleGroup.add(triggerTip);
+
+  const strapMount = new THREE.Mesh(new THREE.CylinderGeometry(0.045, 0.045, 0.09, 12), clampBodyMaterial);
+  strapMount.rotation.z = Math.PI / 2;
+  strapMount.position.set(-0.16, 2.85, 0);
+  poleGroup.add(strapMount);
+
+  const strapCurve = new THREE.CatmullRomCurve3([
+    new THREE.Vector3(-0.16, 2.82, 0),
+    new THREE.Vector3(-0.5, 2.68, 0.02),
+    new THREE.Vector3(-0.68, 2.42, 0.03),
+    new THREE.Vector3(-0.62, 2.1, 0.02),
+    new THREE.Vector3(-0.4, 1.92, 0),
+    new THREE.Vector3(-0.16, 2.05, -0.02)
+  ]);
+  const strapGeoOrange = new THREE.TubeGeometry(strapCurve, 40, 0.09, 8, false);
+  const strapOrange = new THREE.Mesh(strapGeoOrange, strapOrangeMaterial);
+  strapOrange.scale.set(1, 1, 0.35);
+  poleGroup.add(strapOrange);
+
+  const strapGeoBlack = new THREE.TubeGeometry(strapCurve, 40, 0.085, 8, false);
+  const strapBlack = new THREE.Mesh(strapGeoBlack, strapBlackMaterial);
+  strapBlack.scale.set(1, 1, 0.28);
+  strapBlack.position.z = -0.01;
+  poleGroup.add(strapBlack);
+
+  // ==================================================
+  // SHAFT SECTIONS
+  // ==================================================
+
+  const upperShaft = new THREE.Mesh(new THREE.CylinderGeometry(0.1085, 0.1085, 1.55, 32), shaftMaterial);
+  upperShaft.position.y = 1.45;
+  poleGroup.add(upperShaft);
+
+  const brandBand = new THREE.Mesh(new THREE.TorusGeometry(0.1099, 0.008, 8, 80), capMaterial);
+  brandBand.rotation.x = Math.PI / 2;
+  brandBand.position.y = 1.1;
+  poleGroup.add(brandBand);
+
+  const midShaft = new THREE.Mesh(new THREE.CylinderGeometry(0.1015, 0.1015, 1.55, 32), shaftMaterial);
+  midShaft.position.y = -0.15;
+  poleGroup.add(midShaft);
+
+  const lowerShaft = new THREE.Mesh(new THREE.CylinderGeometry(0.0945, 0.0945, 1.55, 32), shaftMaterial);
+  lowerShaft.position.y = -1.75;
+  poleGroup.add(lowerShaft);
+
+  // Thin vertical brushed-metal highlight strips to sell the metallic look
+  function addBrushStrip(parentMesh, angleOffset) {
+    const strip = new THREE.Mesh(
+      new THREE.PlaneGeometry(0.02, 1.5),
+      new THREE.MeshStandardMaterial({ color: 0x9aa4b5, roughness: 0.15, metalness: 0.9, transparent: true, opacity: 0.18, side: THREE.DoubleSide })
+    );
+    strip.position.y = 0;
+    strip.rotation.y = angleOffset;
+    strip.position.x = Math.sin(angleOffset) * 0.109;
+    strip.position.z = Math.cos(angleOffset) * 0.109;
+    parentMesh.add(strip);
+  }
+  addBrushStrip(upperShaft, 0.5);
+  addBrushStrip(midShaft, 0.5);
+  addBrushStrip(lowerShaft, 0.5);
+
+  // ==================================================
+  // FLICKLOCK CLAMPS
+  // ==================================================
+
+  function buildFlickLock(yPos, radius) {
+    const group = new THREE.Group();
+    const collar = new THREE.Mesh(new THREE.CylinderGeometry(radius + 0.02, radius + 0.02, 0.28, 24), clampBodyMaterial);
+    group.add(collar);
+    const lever = new THREE.Mesh(new THREE.BoxGeometry(0.32, 0.09, 0.06), clampMaterial);
+    lever.position.set(radius + 0.16, 0, 0);
+    lever.rotation.z = Math.PI * 0.06;
+    group.add(lever);
+    const hinge = new THREE.Mesh(new THREE.CylinderGeometry(0.035, 0.035, 0.09, 10), clampBodyMaterial);
+    hinge.rotation.x = Math.PI / 2;
+    hinge.position.set(radius + 0.02, 0, 0);
+    group.add(hinge);
+    group.position.y = yPos;
+    return group;
+  }
+
+  const flickLockUpper = buildFlickLock(0.62, 0.1015);
+  poleGroup.add(flickLockUpper);
+
+  const flickLockLower = buildFlickLock(-0.98, 0.0945);
+  poleGroup.add(flickLockLower);
+
+  // ==================================================
+  // GPS MODULE
+  // ==================================================
+
+  const gpsModule = new THREE.Group();
+
+  const gpsCradle = new THREE.Mesh(new THREE.CylinderGeometry(0.175, 0.175, 0.12, 20, 1, false, -Math.PI * 0.4, Math.PI * 0.8), gpsHousingMaterial);
+  gpsModule.add(gpsCradle);
+
+  const gpsBody = new THREE.Mesh(new THREE.BoxGeometry(0.26, 0.4, 0.14), gpsHousingMaterial);
+  gpsBody.position.set(0.24, 0, 0);
+  gpsModule.add(gpsBody);
+
+  const gpsScreen = new THREE.Mesh(new THREE.BoxGeometry(0.18, 0.24, 0.02), gpsScreenMaterial);
+  gpsScreen.position.set(0.24, 0.03, 0.075);
+  gpsModule.add(gpsScreen);
+
+  const gpsBtn1 = new THREE.Mesh(new THREE.CylinderGeometry(0.02, 0.02, 0.015, 12), gpsButtonMaterial);
+  gpsBtn1.rotation.x = Math.PI / 2;
+  gpsBtn1.position.set(0.18, -0.13, 0.075);
+  gpsModule.add(gpsBtn1);
+
+  const gpsBtn2 = gpsBtn1.clone();
+  gpsBtn2.position.set(0.30, -0.13, 0.075);
+  gpsModule.add(gpsBtn2);
+
+  const gpsAntenna = new THREE.Mesh(new THREE.CylinderGeometry(0.018, 0.022, 0.14, 10), gpsAntennaMaterial);
+  gpsAntenna.position.set(0.24, 0.27, 0);
+  gpsModule.add(gpsAntenna);
+
+  const gpsCompassRing = new THREE.Mesh(new THREE.TorusGeometry(0.1, 0.012, 10, 40), compassRingMaterial);
+  gpsCompassRing.position.set(0.24, 0.03, 0.09);
+  gpsModule.add(gpsCompassRing);
+
+  const gpsCompassNeedle = new THREE.Mesh(new THREE.ConeGeometry(0.015, 0.07, 6), new THREE.MeshStandardMaterial({ color: 0xff3030 }));
+  gpsCompassNeedle.position.set(0.24, 0.03, 0.1);
+  gpsCompassNeedle.rotation.z = Math.PI / 2;
+  gpsModule.add(gpsCompassNeedle);
+
+  gpsModule.position.set(0, 1.75, 0.02);
+  gpsModule.rotation.y = -Math.PI * 0.15;
+  poleGroup.add(gpsModule);
+
+  // ==================================================
+  // ALARM / BEACON MODULE
+  // ==================================================
+
+  const alarmModule = new THREE.Group();
+
+  const alarmCradle = new THREE.Mesh(new THREE.CylinderGeometry(0.155, 0.155, 0.1, 20, 1, false, Math.PI * 0.6, Math.PI * 0.8), alarmHousingMaterial);
+  alarmModule.add(alarmCradle);
+
+  const alarmBody = new THREE.Mesh(new THREE.CylinderGeometry(0.09, 0.09, 0.09, 16), alarmHousingMaterial);
+  alarmBody.rotation.x = Math.PI / 2;
+  alarmBody.position.set(-0.2, 0, 0);
+  alarmModule.add(alarmBody);
+
+  const alarmSpeaker = new THREE.Mesh(new THREE.CylinderGeometry(0.075, 0.075, 0.01, 16), alarmSpeakerMaterial);
+  alarmSpeaker.rotation.x = Math.PI / 2;
+  alarmSpeaker.position.set(-0.245, 0, 0);
+  alarmModule.add(alarmSpeaker);
+
+  const alarmLed = new THREE.Mesh(new THREE.SphereGeometry(0.018, 10, 10), alarmLedMaterial);
+  alarmLed.position.set(-0.245, 0.06, 0.02);
+  alarmModule.add(alarmLed);
+
+  alarmModule.position.set(0, 1.3, 0.02);
+  poleGroup.add(alarmModule);
+
+  // ==================================================
+  // TIP + STAR SNOW BASKET
+  // ==================================================
+
+  const poleTip = new THREE.Mesh(new THREE.ConeGeometry(0.09, 0.4, 24), tipMaterial);
+  poleTip.rotation.x = Math.PI;
+  poleTip.position.y = -2.75;
+  poleGroup.add(poleTip);
+
+  const tipCollar = new THREE.Mesh(new THREE.CylinderGeometry(0.1, 0.11, 0.14, 16), clampBodyMaterial);
+  tipCollar.position.y = -2.5;
+  poleGroup.add(tipCollar);
+
+  function buildStarBasket() {
+    const points = 6;
+    const outerR = 0.34;
+    const innerR = 0.14;
+    const shape = new THREE.Shape();
+    for (let i = 0; i < points * 2; i++) {
+      const r = i % 2 === 0 ? outerR : innerR;
+      const angle = (i / (points * 2)) * Math.PI * 2;
+      const x = Math.cos(angle) * r;
+      const y = Math.sin(angle) * r;
+      if (i === 0) shape.moveTo(x, y); else shape.lineTo(x, y);
+    }
+    shape.closePath();
+    const geo = new THREE.ExtrudeGeometry(shape, { depth: 0.02, bevelEnabled: false });
+    const mesh = new THREE.Mesh(geo, basketMaterial);
+    mesh.rotation.x = Math.PI / 2;
+    return mesh;
+  }
+
+  const snowBasket = buildStarBasket();
+  snowBasket.position.y = -2.35;
+  snowBasket.visible = false;
+  poleGroup.add(snowBasket);
+
+  // ==================================================
+  // BASE PLATE
+  // ==================================================
+
+  const basePlate = new THREE.Mesh(
+    new THREE.CircleGeometry(5.5, 64),
+    new THREE.MeshStandardMaterial({ color: 0xd8d8c0, roughness: 0.78 })
+  );
+  basePlate.rotation.x = -Math.PI / 2;
+  basePlate.position.y = -3.025;
+  scene.add(basePlate);
+
+  poleGroup.rotation.x = Math.PI * 0.08;
+  poleGroup.rotation.y = -Math.PI * 0.18;
+
+  // ==================================================
+  // CONFIGURATOR LOGIC
+  // ==================================================
+
+  function updateSummary() {
+    summaryList.innerHTML = `
+      <li>GPS: ${summary.gps[state.gps]}</li>
+      <li>Alarm: ${summary.alarm[state.alarm]}</li>
+      <li>Tip: ${summary.tip[state.tip]}</li>
+      <li>Thickness: ${summary.thickness[state.thickness]}</li>
+      <li>Length: ${summary.length[state.length]}</li>
+    `;
+    const total = Object.keys(price).reduce((sum, key) => sum + price[key][state[key]], 279);
+    priceLabel.textContent = `$${total}`;
+  }
+
+  function updatePole() {
+    const lengthScale = state.length === '125-140' ? 1.12 : state.length === '140-155' ? 1.25 : 1;
+    const extra = (lengthScale - 1) * 0.5;
+
+    upperShaft.scale.y = lengthScale;
+    midShaft.scale.y = lengthScale;
+    lowerShaft.scale.y = lengthScale;
+
+    upperShaft.position.y = 1.45 + extra * 0.5;
+    lowerShaft.position.y = -1.75 - extra * 0.5;
+
+    flickLockUpper.position.y = 0.62 + extra * 0.25;
+    flickLockLower.position.y = -0.98 - extra * 0.25;
+
+    poleTip.position.y = -2.75 - extra;
+    tipCollar.position.y = -2.5 - extra;
+    snowBasket.position.y = -2.35 - extra;
+
+    if (state.thickness === 'reinforced') {
+      shaftMaterial.color.set(0x1c1e22);
+      shaftMaterial.metalness = 0.9;
+      shaftMaterial.roughness = 0.22;
+      upperShaft.scale.x = upperShaft.scale.z = 1.15;
+      midShaft.scale.x = midShaft.scale.z = 1.15;
+      lowerShaft.scale.x = lowerShaft.scale.z = 1.15;
+    } else {
+      shaftMaterial.color.set(0x14161a);
+      shaftMaterial.metalness = 0.85;
+      shaftMaterial.roughness = 0.28;
+      upperShaft.scale.x = upperShaft.scale.z = 1;
+      midShaft.scale.x = midShaft.scale.z = 1;
+      lowerShaft.scale.x = lowerShaft.scale.z = 1;
+    }
+
+    if (state.tip === 'snow') {
+      poleTip.scale.set(1.3, 0.5, 1.3);
+      snowBasket.visible = true;
+    } else if (state.tip === 'rock') {
+      poleTip.scale.set(0.8, 1.4, 0.8);
+      snowBasket.visible = false;
+    } else {
+      poleTip.scale.set(1, 1, 1);
+      snowBasket.visible = false;
+    }
+
+    const isPro = state.gps === 'pro';
+    gpsCompassRing.visible = isPro;
+    gpsCompassNeedle.visible = isPro;
+    gpsAntenna.scale.y = isPro ? 1.6 : 1;
+    gpsAntenna.position.y = isPro ? 0.32 : 0.27;
+    gpsBody.scale.set(isPro ? 1.15 : 1, isPro ? 1.1 : 1, isPro ? 1.15 : 1);
+    gpsScreenMaterial.emissiveIntensity = isPro ? 0.8 : 0.4;
+    gpsScreenMaterial.emissive.set(isPro ? 0x2ea8ff : 0x1a5a7a);
+
+    const isAudible = state.alarm === 'audible';
+    alarmSpeaker.scale.set(isAudible ? 1.3 : 1, 1, isAudible ? 1.3 : 1);
+    alarmLed.visible = isAudible;
+    alarmBody.scale.set(isAudible ? 1.2 : 1, isAudible ? 1.2 : 1, isAudible ? 1.2 : 1);
+
+    updateSummary();
+  }
+
+  document.querySelectorAll('.control-group input').forEach(input => {
+    input.addEventListener('change', event => {
+      const { name, value } = event.target;
+      state[name] = value;
+      updatePole();
+    });
+  });
+
+  function resize() {
+    const width = modelScene.clientWidth;
+    const height = modelScene.clientHeight;
+    renderer.setSize(width, height);
+    camera.aspect = width / height;
+    camera.updateProjectionMatrix();
+  }
+
+  window.addEventListener('resize', resize);
+  resize();
+  updatePole();
+
+  function animate() {
+    controls.update();
+    renderer.render(scene, camera);
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+</script>
+  </body>
+</html> 
