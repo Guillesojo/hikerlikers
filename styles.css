@@ -126,6 +126,10 @@ button {
   color: #f7f7f2;
 }
 
+.btn-primary1 {
+  background: linear-gradient(135deg, #789098 0%, #657e84 100%);
+  color: #f7f7f2;
+}
 .btn-secondary {
   background: transparent;
   border-color: rgba(137, 152, 120, 0.3);
