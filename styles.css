@@ -135,7 +135,12 @@ button {
   border-color: rgba(137, 152, 120, 0.3);
   color: var(--text);
 }
-
+.btn-secondary1 {
+  background: transparent;
+  border-color: rgba(137, 152, 120, 0.3);
+  color: var(--text);
+  text-align: center;
+}
 .btn-outline {
   background: transparent;
   border-color: rgba(137, 152, 120, 0.4);
