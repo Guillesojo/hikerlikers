@@ -53,7 +53,13 @@ button {
 .brand {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.9rem;
+}
+
+.brand-logo {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
 }
 
 .brand-mark {
@@ -617,9 +623,14 @@ button {
 
   .build-panel.build-layout {
     display: grid;
-    grid-template-columns: 1.2fr 0.85fr;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.85fr);
     gap: 2rem;
     padding: 2.5rem 2rem 3rem;
+  }
+
+  .model-view,
+  .model-scene {
+    min-width: 0;
   }
 
   .model-view {
@@ -651,6 +662,12 @@ button {
 
   .model-scene:active {
     cursor: grabbing;
+  }
+
+  .model-scene canvas {
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
   }
 
   .pole-assembly {
@@ -968,6 +985,114 @@ button {
   }
 }
 
+@media (max-width: 1005px) {
+  .site-header {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1.25rem 1.5rem;
+  }
+
+  .site-nav {
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .nav-actions {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-section {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 3rem 1.5rem 2rem;
+    min-height: auto;
+  }
+
+  .hero-copy {
+    max-width: 100%;
+  }
+
+  .hero-actions {
+    flex-wrap: wrap;
+    gap: 0.9rem;
+  }
+
+  .hero-badges {
+    justify-content: flex-start;
+  }
+
+  .hero-scene {
+    width: min(100%, 420px);
+  }
+
+  .hero-section.hero-build {
+    padding: 3rem 1.5rem 2rem;
+  }
+
+  .hero-section.hero-build h1 {
+    font-size: clamp(2.6rem, 4vw, 3.2rem);
+  }
+
+  .build-panel.build-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0 1.5rem 2rem;
+  }
+
+  .model-view {
+    position: static;
+    top: auto;
+    min-height: auto;
+    padding-bottom: 1rem;
+  }
+
+  .model-scene {
+    width: 100%;
+    min-height: 400px;
+  }
+
+  .build-controls {
+    gap: 1.5rem;
+  }
+
+  .module-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .module-card,
+  .feature-strip article,
+  .feature-card,
+  .intro-points article {
+    padding: 1.5rem;
+  }
+
+  .summary-card {
+    width: 100%;
+  }
+
+  .summary-foot {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  .summary-foot button {
+    width: 100%;
+  }
+
+  .story-section,
+  .build-info {
+    grid-template-columns: 1fr;
+  }
+
+  .story-image {
+    min-height: 360px;
+    width: 100%;
+  }
+}
+
 @media (max-width: 720px) {
   .site-header {
     flex-direction: column;
@@ -978,7 +1103,8 @@ button {
 
   .site-nav {
     justify-content: center;
-    gap: 1rem;
+    gap: 0.75rem;
+    flex-wrap: wrap;
   }
 
   .site-nav a,
@@ -986,8 +1112,16 @@ button {
     font-size: 0.95rem;
   }
 
+  .module-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
   .nav-actions {
+    width: 100%;
     justify-content: center;
+    flex-direction: column;
+    gap: 0.75rem;
   }
 
   .hero-section {
@@ -1068,7 +1202,12 @@ button {
   }
 
   .site-header {
-    padding: 1rem;
+    padding: 0.9rem 1rem;
+    gap: 0.9rem;
+  }
+
+  .site-nav {
+    gap: 0.75rem;
   }
 
   .hero-section {
@@ -1076,25 +1215,189 @@ button {
   }
 
   .hero-copy h1 {
-    font-size: 2.6rem;
+    font-size: 2.4rem;
+    line-height: 1.05;
   }
 
   .hero-text,
   .story-section p,
   .intro-copy p,
   .feature-strip p,
-  .feature-card p {
-    font-size: 0.98rem;
+  .feature-card p,
+  .module-card p,
+  .summary-card li,
+  .control-group label {
+    font-size: 0.97rem;
   }
 
-  .feature-strip article,
-  .feature-card,
-  .hero-card,
-  .intro-points article {
+  .hero-actions {
+    gap: 0.75rem;
+  }
+
+  .btn {
+    padding: 0.85rem 1.2rem;
+  }
+
+  .hero-scene {
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .hero-card {
     padding: 1.5rem;
   }
 
   .stats-row {
     grid-template-columns: 1fr;
+  }
+
+  .intro-panel,
+  .feature-strip,
+  .cards-grid,
+  .story-section,
+  .build-info {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .intro-copy p {
+    max-width: 100%;
+  }
+
+  .intro-panel,
+  .story-section,
+  .feature-strip,
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .story-image {
+    min-height: 280px;
+  }
+
+  .cta-band {
+    padding: 1.25rem 1rem;
+  }
+
+  .cta-band button {
+    width: 100%;
+  }
+
+  .build-panel.build-layout {
+    padding: 1.5rem 1rem 1.5rem;
+  }
+
+  .model-view {
+    padding-bottom: 0.75rem;
+  }
+
+  .model-scene {
+    min-height: 360px;
+    max-height: none;
+  }
+
+  .module-card,
+  .feature-strip article,
+  .feature-card,
+  .intro-points article,
+  .summary-card,
+  .build-info article {
+    padding: 1.25rem;
+  }
+
+  .summary-foot {
+    gap: 0.75rem;
+  }
+
+  .summary-foot div {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 420px) {
+  :root {
+    font-size: 14px;
+  }
+
+  .site-header {
+    padding: 0.85rem 0.85rem;
+  }
+
+  .site-nav,
+  .nav-actions {
+    width: 100%;
+  }
+
+  .hero-section {
+    padding: 1.75rem 0.85rem 1.25rem;
+  }
+
+  .hero-copy h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-text,
+  .story-section p,
+  .intro-copy p,
+  .feature-strip p,
+  .feature-card p,
+  .module-card p,
+  .control-group label {
+    font-size: 0.94rem;
+  }
+
+  .hero-scene {
+    max-width: 320px;
+  }
+
+  .hero-card,
+  .module-card,
+  .feature-strip article,
+  .feature-card,
+  .intro-points article,
+  .summary-card,
+  .build-info article {
+    padding: 1rem;
+  }
+
+  .btn {
+    padding: 0.8rem 1rem;
+  }
+
+  .site-nav a,
+  .footer-nav a {
+    font-size: 0.9rem;
+  }
+
+  .brand-logo {
+    width: 36px;
+    height: 36px;
+  }
+
+  .site-header {
+    padding: 1rem 1rem;
+  }
+
+  .cta-band {
+    padding: 1rem 0.85rem;
+  }
+
+  .build-panel.build-layout {
+    padding: 1rem 0.85rem 1.5rem;
+  }
+
+  .model-scene {
+    min-height: 320px;
+  }
+
+  .summary-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .summary-foot div {
+    justify-content: space-between;
   }
 }

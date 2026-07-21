@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Build Your Own Pole | SummitPole</title>
+    <title>Build Your Own Pole | TerraPole</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,9 +15,9 @@
   <body>
     <header class="site-header">
       <div class="brand">
-        <span class="brand-mark">▲</span>
+        <img class="brand-logo" src="logo.png" alt="TerraPole logo" />
         <div>
-          <p class="brand-name">SummitPole</p>
+          <p class="brand-name">TerraPole</p>
           <p class="brand-tag">Engineered for long days on trail</p>
         </div>
       </div>
@@ -57,78 +57,70 @@
           <div class="module-grid">
             <article class="module-card">
               <span class="module-label">0</span>
-              <h2>Base package</h2>
-              <p>Core pole assembly, ergonomic grip, and standard finish.</p>
-              <div class="module-price">Base price <strong>$279</strong></div>
+              <h2>Package selection</h2>
+              <p>Choose a package preset. Comfort includes SOS Alarm + GPS only. Pro includes every add-on.
+              </p>
+              <div class="module-price">Base price <strong>$79.99</strong></div>
               <div class="control-group">
-                <label><input type="radio" name="base" value="standard" checked /><span>SummitPole Base</span><span class="option-price">Included</span></label>
+                <label><input type="radio" name="package" value="base" checked /><span>TerraPole Base</span><span class="option-price">Included</span></label>
+                <label><input type="radio" name="package" value="comfort" /><span>TerraPole Comfort</span><span class="option-price">Includes SOS Alarm + GPS</span></label>
+                <label><input type="radio" name="package" value="pro" /><span>TerraPole Pro</span><span class="option-price">Includes all add-ons</span></label>
               </div>
             </article>
 
             <article class="module-card">
               <span class="module-label">1</span>
-              <h2>GPS Navigation</h2>
-              <p>Integrated location support for wayfinding and route tracking.</p>
+              <h2>SOS Alarm + GPS</h2>
+              <p>Add the SOS alarm and GPS module to keep navigation and emergency signaling on the pole.</p>
               <div class="control-group">
-                <label><input type="radio" name="gps" value="standard" checked /><span>Standard GPS</span><span class="option-price">Included</span></label>
-                <label><input type="radio" name="gps" value="pro" /><span>Pro GPS + Compass</span><span class="option-price">+$60</span></label>
+                <label><input type="radio" name="module" value="none" checked /><span>No SOS Alarm + GPS</span><span class="option-price">Included</span></label>
+                <label><input type="radio" name="module" value="enabled" /><span>SOS Alarm + GPS</span><span class="option-price">+$34.99</span></label>
               </div>
             </article>
 
             <article class="module-card">
               <span class="module-label">2</span>
-              <h2>Alarm System</h2>
-              <p>Protect your gear and stay aware of unexpected terrain changes.</p>
+              <h2>Flashlight</h2>
+              <p>An integrated LED flashlight mounted on the lower third of the pole for low-light trail use.</p>
               <div class="control-group">
-                <label><input type="radio" name="alarm" value="silent" checked /><span>Silent alert</span><span class="option-price">Included</span></label>
-                <label><input type="radio" name="alarm" value="audible" /><span>Audible beacon</span><span class="option-price">+$20</span></label>
+                <label><input type="radio" name="flashlight" value="none" checked /><span>No flashlight</span><span class="option-price">Included</span></label>
+                <label><input type="radio" name="flashlight" value="enabled" /><span>Integrated flashlight</span><span class="option-price">+$30</span></label>
               </div>
             </article>
 
             <article class="module-card">
               <span class="module-label">3</span>
-              <h2>Tip Selection</h2>
-              <p>Pick the tip that matches your route and ground conditions.</p>
+              <h2>Terrain Tip Set</h2>
+              <p>Upgrade from the standard trail tip to a broader terrain tip set for mixed conditions.</p>
               <div class="control-group">
-                <label><input type="radio" name="tip" value="trail" checked /><span>Trail tip</span><span class="option-price">Included</span></label>
-                <label><input type="radio" name="tip" value="snow" /><span>Snow basket</span><span class="option-price">+$15</span></label>
-                <label><input type="radio" name="tip" value="rock" /><span>Rock-climb tip</span><span class="option-price">+$20</span></label>
+                <label><input type="radio" name="tip" value="trail" checked /><span>Standard trail tip</span><span class="option-price">Included</span></label>
+                <label><input type="radio" name="tip" value="terrain" /><span>Terrain tip set</span><span class="option-price">+$9.99</span></label>
               </div>
             </article>
 
             <article class="module-card">
               <span class="module-label">4</span>
-              <h2>Thickness</h2>
-              <p>Balance rigidity and weight with the right shaft profile.</p>
+              <h2>Heart rate monitor</h2>
+              <p>Track your pulse on the trail with a built-in wrist monitor and live feedback display.</p>
               <div class="control-group">
-                <label><input type="radio" name="thickness" value="lightweight" checked /><span>Lightweight</span><span class="option-price">Included</span></label>
-                <label><input type="radio" name="thickness" value="reinforced" /><span>Reinforced</span><span class="option-price">+$30</span></label>
+                <label><input type="radio" name="hrmonitor" value="none" checked /><span>No monitor</span><span class="option-price">Included</span></label>
+                <label><input type="radio" name="hrmonitor" value="enabled" /><span>Heart rate monitor</span><span class="option-price">+$40</span></label>
               </div>
             </article>
 
-            <article class="module-card">
-              <span class="module-label">5</span>
-              <h2>Length</h2>
-              <p>Select the ideal pole length for your height and terrain type.</p>
-              <div class="control-group">
-                <label><input type="radio" name="length" value="110-125" checked /><span>110–125 cm</span><span class="option-price">Included</span></label>
-                <label><input type="radio" name="length" value="125-140" /><span>125–140 cm</span><span class="option-price">+$20</span></label>
-                <label><input type="radio" name="length" value="140-155" /><span>140–155 cm</span><span class="option-price">+$35</span></label>
-              </div>
-            </article>
           </div>
 
           <aside class="summary-card">
             <div class="summary-header">
               <span>Build summary</span>
-              <strong>Summit Pro</strong>
+              <strong>TerraPole Pro</strong>
             </div>
             <ul id="buildSummary">
-              <li>GPS: Standard GPS</li>
-              <li>Alarm: Silent alert</li>
+              <li>Package: TerraPole Base</li>
+              <li>Module: No GPS/Beacon module</li>
               <li>Tip: Trail tip</li>
-              <li>Thickness: Lightweight</li>
-              <li>Length: 110–125 cm</li>
+              <li>Heart rate monitor: No monitor</li>
+              <li>Flashlight: No flashlight</li>
             </ul>
             <div class="summary-foot">
               <div>
@@ -148,13 +140,13 @@
         </article>
         <article>
           <h2>Built like a premium vehicle</h2>
-          <p>From integrated navigation to impact-resistant tips, the SummitPole build experience reflects modern automotive control systems and materials.</p>
+          <p>From integrated navigation to impact-resistant tips, the TerraPole build experience reflects modern automotive control systems and materials.</p>
         </article>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>&copy; 2026 SummitPole. Crafted for modern hiking.</p>
+      <p>&copy; 2026 TerraPole. Crafted for modern hiking.</p>
       <nav class="footer-nav">
         <a href="index.html">Home</a>
         <a href="#">Support</a>
@@ -166,27 +158,27 @@
 <script src="https://cdn.jsdelivr.net/npm/three/examples/js/controls/OrbitControls.js"></script>
 <script>
 const summary = {
-    gps: { standard: 'Standard GPS', pro: 'Pro GPS + Compass' },
-    alarm: { silent: 'Silent alert', audible: 'Audible beacon' },
-    tip: { trail: 'Trail tip', snow: 'Snow basket', rock: 'Rock-climb tip' },
-    thickness: { lightweight: 'Lightweight', reinforced: 'Reinforced' },
-    length: { '110-125': '110–125 cm', '125-140': '125–140 cm', '140-155': '140–155 cm' }
+    package: { base: 'TerraPole Base', comfort: 'TerraPole Comfort', pro: 'TerraPole Pro' },
+    module: { enabled: 'SOS Alarm + GPS', none: 'No SOS Alarm + GPS' },
+    tip: { trail: 'Standard trail tip', terrain: 'Terrain tip set' },
+    hrmonitor: { none: 'No monitor', enabled: 'Heart rate monitor' },
+    flashlight: { none: 'No flashlight', enabled: 'Integrated flashlight' }
   };
 
   const price = {
-    gps: { standard: 0, pro: 60 },
-    alarm: { silent: 0, audible: 20 },
-    tip: { trail: 0, snow: 15, rock: 20 },
-    thickness: { lightweight: 0, reinforced: 30 },
-    length: { '110-125': 0, '125-140': 20, '140-155': 35 }
+    package: { base: 0, comfort: 0, pro: 0 },
+    module: { enabled: 34.99, none: 0 },
+    tip: { trail: 0, terrain: 9.99 },
+    hrmonitor: { none: 0, enabled: 14.99 },
+    flashlight: { none: 0, enabled: 9.99 }
   };
 
   const state = {
-    gps: 'standard',
-    alarm: 'silent',
+    package: 'base',
+    module: 'none',
     tip: 'trail',
-    thickness: 'lightweight',
-    length: '110-125'
+    hrmonitor: 'none',
+    flashlight: 'none'
   };
 
   const summaryList = document.getElementById('buildSummary');
@@ -468,6 +460,8 @@ const summary = {
   gpsModule.rotation.y = -Math.PI * 0.15;
   poleGroup.add(gpsModule);
 
+  const gpsModuleRoot = gpsModule;
+
   // ==================================================
   // ALARM / BEACON MODULE
   // ==================================================
@@ -493,6 +487,52 @@ const summary = {
 
   alarmModule.position.set(0, 1.3, 0.02);
   poleGroup.add(alarmModule);
+
+  // ==================================================
+  // FLASHLIGHT MODULE
+
+  const flashlightGroup = new THREE.Group();
+  const flashlightBody = new THREE.Mesh(new THREE.CylinderGeometry(0.055, 0.055, 0.22, 18), new THREE.MeshStandardMaterial({ color: 0x242a31, roughness: 0.25, metalness: 0.4 }));
+  flashlightBody.rotation.z = Math.PI / 2;
+  flashlightBody.position.set(-0.12, -0.9, 0);
+  flashlightGroup.add(flashlightBody);
+
+  const flashlightHead = new THREE.Mesh(new THREE.CylinderGeometry(0.065, 0.055, 0.1, 18), new THREE.MeshStandardMaterial({ color: 0x4b5360, roughness: 0.22, metalness: 0.5 }));
+  flashlightHead.rotation.z = Math.PI / 2;
+  flashlightHead.position.set(-0.25, -0.9, 0);
+  flashlightGroup.add(flashlightHead);
+
+  const flashlightLens = new THREE.Mesh(new THREE.CircleGeometry(0.048, 24), new THREE.MeshStandardMaterial({ color: 0xdbe5ff, emissive: 0x9ec8ff, emissiveIntensity: 0.4, roughness: 0.1 }));
+  flashlightLens.rotation.y = Math.PI / 2;
+  flashlightLens.position.set(-0.3, -0.9, 0);
+  flashlightGroup.add(flashlightLens);
+
+  flashlightGroup.visible = false;
+  poleGroup.add(flashlightGroup);
+
+  // ==================================================
+  // HEART RATE MONITOR MODULE
+  // ==================================================
+
+  const hrMonitorGroup = new THREE.Group();
+  const hrMonitorHousing = new THREE.Mesh(new THREE.BoxGeometry(0.22, 0.12, 0.1), gpsHousingMaterial);
+  hrMonitorHousing.position.set(0.28, 2.3, 0.02);
+  hrMonitorHousing.rotation.z = -Math.PI * 0.08;
+  hrMonitorGroup.add(hrMonitorHousing);
+
+  const hrMonitorScreenMaterial = new THREE.MeshStandardMaterial({ color: 0x062f1f, emissive: 0x1df4a3, emissiveIntensity: 0.1, roughness: 0.28, metalness: 0.15 });
+  const hrMonitorScreen = new THREE.Mesh(new THREE.BoxGeometry(0.16, 0.08, 0.02), hrMonitorScreenMaterial);
+  hrMonitorScreen.position.set(0.28, 2.3, 0.07);
+  hrMonitorScreen.rotation.z = -Math.PI * 0.08;
+  hrMonitorGroup.add(hrMonitorScreen);
+
+  const hrMonitorPulse = new THREE.Mesh(new THREE.BoxGeometry(0.08, 0.02, 0.01), new THREE.MeshStandardMaterial({ color: 0x0fffb4, emissive: 0x0fffb4, emissiveIntensity: 0.85, roughness: 0.2 }));
+  hrMonitorPulse.position.set(0.28, 2.26, 0.08);
+  hrMonitorPulse.rotation.z = -Math.PI * 0.08;
+  hrMonitorGroup.add(hrMonitorPulse);
+
+  hrMonitorGroup.visible = false;
+  poleGroup.add(hrMonitorGroup);
 
   // ==================================================
   // TIP + STAR SNOW BASKET
@@ -552,49 +592,32 @@ const summary = {
 
   function updateSummary() {
     summaryList.innerHTML = `
-      <li>GPS: ${summary.gps[state.gps]}</li>
-      <li>Alarm: ${summary.alarm[state.alarm]}</li>
+      <li>Package: ${summary.package[state.package]}</li>
+      <li>Module: ${summary.module[state.module]}</li>
       <li>Tip: ${summary.tip[state.tip]}</li>
-      <li>Thickness: ${summary.thickness[state.thickness]}</li>
-      <li>Length: ${summary.length[state.length]}</li>
+      <li>Heart rate monitor: ${summary.hrmonitor[state.hrmonitor]}</li>
+      <li>Flashlight: ${summary.flashlight[state.flashlight]}</li>
     `;
-    const total = Object.keys(price).reduce((sum, key) => sum + price[key][state[key]], 279);
-    priceLabel.textContent = `$${total}`;
+    const total = Object.keys(price).reduce((sum, key) => sum + price[key][state[key]], 79.99);
+    priceLabel.textContent = `$${total.toFixed(2)}`;
   }
 
   function updatePole() {
-    const lengthScale = state.length === '125-140' ? 1.12 : state.length === '140-155' ? 1.25 : 1;
-    const extra = (lengthScale - 1) * 0.5;
+    upperShaft.scale.y = 1;
+    midShaft.scale.y = 1;
+    lowerShaft.scale.y = 1;
 
-    upperShaft.scale.y = lengthScale;
-    midShaft.scale.y = lengthScale;
-    lowerShaft.scale.y = lengthScale;
+    upperShaft.position.y = 1.45;
+    lowerShaft.position.y = -1.75;
 
-    upperShaft.position.y = 1.45 + extra * 0.5;
-    lowerShaft.position.y = -1.75 - extra * 0.5;
+    flickLockUpper.position.y = 0.62;
+    flickLockLower.position.y = -0.98;
 
-    flickLockUpper.position.y = 0.62 + extra * 0.25;
-    flickLockLower.position.y = -0.98 - extra * 0.25;
+    poleTip.position.y = -2.75;
+    tipCollar.position.y = -2.5;
+    snowBasket.position.y = -2.35;
 
-    poleTip.position.y = -2.75 - extra;
-    tipCollar.position.y = -2.5 - extra;
-    snowBasket.position.y = -2.35 - extra;
-
-    if (state.thickness === 'reinforced') {
-      shaftMaterial.color.set(0x1c1e22);
-      shaftMaterial.metalness = 0.9;
-      shaftMaterial.roughness = 0.22;
-      upperShaft.scale.x = upperShaft.scale.z = 1.15;
-      midShaft.scale.x = midShaft.scale.z = 1.15;
-      lowerShaft.scale.x = lowerShaft.scale.z = 1.15;
-    } else {
-      shaftMaterial.color.set(0x14161a);
-      shaftMaterial.metalness = 0.85;
-      shaftMaterial.roughness = 0.28;
-      upperShaft.scale.x = upperShaft.scale.z = 1;
-      midShaft.scale.x = midShaft.scale.z = 1;
-      lowerShaft.scale.x = lowerShaft.scale.z = 1;
-    }
+    hrMonitorGroup.visible = state.hrmonitor === 'enabled';
 
     if (state.tip === 'snow') {
       poleTip.scale.set(1.3, 0.5, 1.3);
@@ -607,27 +630,57 @@ const summary = {
       snowBasket.visible = false;
     }
 
-    const isPro = state.gps === 'pro';
-    gpsCompassRing.visible = isPro;
-    gpsCompassNeedle.visible = isPro;
-    gpsAntenna.scale.y = isPro ? 1.6 : 1;
-    gpsAntenna.position.y = isPro ? 0.32 : 0.27;
-    gpsBody.scale.set(isPro ? 1.15 : 1, isPro ? 1.1 : 1, isPro ? 1.15 : 1);
-    gpsScreenMaterial.emissiveIntensity = isPro ? 0.8 : 0.4;
-    gpsScreenMaterial.emissive.set(isPro ? 0x2ea8ff : 0x1a5a7a);
+    const moduleEnabled = state.module === 'enabled';
+    gpsModuleRoot.visible = moduleEnabled;
+    gpsCompassRing.visible = moduleEnabled;
+    gpsCompassNeedle.visible = moduleEnabled;
+    gpsAntenna.scale.y = moduleEnabled ? 1.6 : 1;
+    gpsAntenna.position.y = moduleEnabled ? 0.32 : 0.27;
+    gpsBody.scale.set(moduleEnabled ? 1.15 : 1, moduleEnabled ? 1.1 : 1, moduleEnabled ? 1.15 : 1);
+    gpsScreenMaterial.emissiveIntensity = moduleEnabled ? 0.8 : 0;
+    gpsScreenMaterial.emissive.set(moduleEnabled ? 0x2ea8ff : 0x000000);
 
-    const isAudible = state.alarm === 'audible';
+    const isAudible = moduleEnabled;
     alarmSpeaker.scale.set(isAudible ? 1.3 : 1, 1, isAudible ? 1.3 : 1);
     alarmLed.visible = isAudible;
     alarmBody.scale.set(isAudible ? 1.2 : 1, isAudible ? 1.2 : 1, isAudible ? 1.2 : 1);
 
+    flashlightGroup.visible = state.flashlight === 'enabled';
+
     updateSummary();
+  }
+
+  function applyPackagePreset(value) {
+    if (value === 'comfort') {
+      state.module = 'enabled';
+      state.tip = 'trail';
+      state.hrmonitor = 'none';
+      state.flashlight = 'none';
+    } else if (value === 'pro') {
+      state.module = 'enabled';
+      state.tip = 'terrain';
+      state.hrmonitor = 'enabled';
+      state.flashlight = 'enabled';
+    } else {
+      state.module = 'none';
+      state.tip = 'trail';
+      state.hrmonitor = 'none';
+      state.flashlight = 'none';
+    }
+
+    document.querySelector('input[name="module"][value="' + state.module + '"]').checked = true;
+    document.querySelector('input[name="tip"][value="' + state.tip + '"]').checked = true;
+    document.querySelector('input[name="hrmonitor"][value="' + state.hrmonitor + '"]').checked = true;
+    document.querySelector('input[name="flashlight"][value="' + state.flashlight + '"]').checked = true;
   }
 
   document.querySelectorAll('.control-group input').forEach(input => {
     input.addEventListener('change', event => {
       const { name, value } = event.target;
       state[name] = value;
+      if (name === 'package') {
+        applyPackagePreset(value);
+      }
       updatePole();
     });
   });
@@ -635,12 +688,17 @@ const summary = {
   function resize() {
     const width = modelScene.clientWidth;
     const height = modelScene.clientHeight;
-    renderer.setSize(width, height);
+    renderer.setSize(width, height, false);
     camera.aspect = width / height;
     camera.updateProjectionMatrix();
   }
 
-  window.addEventListener('resize', resize);
+  if (window.ResizeObserver) {
+    new ResizeObserver(resize).observe(modelScene);
+  } else {
+    window.addEventListener('resize', resize);
+  }
+
   resize();
   updatePole();
 
